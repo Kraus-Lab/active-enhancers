@@ -30,7 +30,6 @@ version(){
     exit 1
 }
 
-
 main(){
 
     # Parsing options
