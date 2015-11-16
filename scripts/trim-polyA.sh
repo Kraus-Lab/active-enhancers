@@ -15,7 +15,7 @@ usage() {
   echo ""
   echo ""
   echo "-h Help documentation for $script_name"
-  echo "-f  --Path to fastq file"
+  echo "-f  --Fastq file"
   echo "-v  --Version of script"
   echo "Example: ./$script_name -f filename.noAdapt.fastq.gz"
   exit 1
@@ -31,7 +31,7 @@ main(){
 
     # Parsing options
     OPTIND=1 # Reset OPTIND
-    while getopts :f:ovh opt
+    while getopts :f:vh opt
         do
             case $opt in
                 f) input_file=$OPTARG;;
@@ -47,8 +47,9 @@ main(){
         usage
     fi
 
-    # Trim reads from fastq file
     input_fn=${input_file/.fastq.gz/}
+
+    # Trimming polyA tail
     cutadapt -a AAAAAAAAAAAAAAAAAAAA -z -e 0.10 --minimum-length=32 --output=$input_file.noPolyA.noAdapt.fastq.gz $input_file 2>&1 >> $input_fn.trim-polyA.out
 }
 

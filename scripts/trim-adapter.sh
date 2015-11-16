@@ -15,7 +15,7 @@ usage() {
   echo ""
   echo ""
   echo "-h Help documentation for $script_name"
-  echo "-f  --Path to fastq file"
+  echo "-f  --Fastq file"
   echo "-a  --Adapter sequence"
   echo "-v  --Version of script"
   echo "Example: ./$script_name -a TCGTATCCCGTCTTCTGCTTG  -f inputfile.fastq.gz"
@@ -32,7 +32,7 @@ main(){
 
     # Parsing options
     OPTIND=1 # Reset OPTIND
-    while getopts :f:a:ovh opt
+    while getopts :f:a:vh opt
         do
             case $opt in
                 f) input_file=$OPTARG;;
@@ -49,8 +49,9 @@ main(){
         usage
     fi
 
-    # Trim reads from fastq file
     input_fn=${input_file/.fastq.gz/}
+
+    # Trimming adapter sequence
     cutadapt -a adapter -z -e 0.10 --minimum-length=32 --output=$input_fn.noAdapt.fastq.gz $input_file 2>&1 >> $input_fn.trim-adapter.out
 }
 
