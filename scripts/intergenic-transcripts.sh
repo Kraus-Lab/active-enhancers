@@ -15,7 +15,7 @@ usage() {
   echo "-h Help documentation for $script_name"
   echo "--a  --Transcript universe from groHMM"
   echo "--b  --Genic regions to avoid"
-  echo "-v  --Version of script"
+  echo "-v   --Version of script"
   echo "Example: ./$script_name -a transcript_universe_from_groHMM.txt  -b genic_regions_to_avoid.bed"
   exit 1
 }
