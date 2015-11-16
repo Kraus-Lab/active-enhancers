@@ -6,7 +6,7 @@ script_ver="1.0.0"
 
 #Help function
 usage() {
-  echo "Identifing intergenic transcripts:"
+  echo "Identifying intergenic transcripts:"
   echo ""
   echo "The input files should be sorted before running the bedtools intersect function using the following unix command: sort -k1,1 -k2,2n ip.txt ip_sorted.txt."
   echo "Only reports those entries in trascript file that have no overlap in genic regions to avoid."
@@ -47,7 +47,7 @@ main(){
         usage
     fi
 
-    # Identifing intergenic transcripts
+    # Identifying intergenic transcripts
     bedtools intersect -a $transcripts -b $genic_regions -v > intergenic_transcripts.txt
 }
 
