@@ -34,19 +34,16 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 ### Identification of active enhancers
 
-<img align="right" src="../images/figure_4.png" height="400">
-#### 1. De novo identification of enhancers
 
+#### 1. De novo identification of enhancers
+<img align="right" src="../images/figure_4.png" height="200">
 - extend-genic-transcripts         - Extend 10 kb away from either end of annotated genes.
 - intergenic-transcripts           - Reports enhancer transcripts that have no overlap +/- 10kb of genic regions.
 - Define_enhancer_transcripts.pl   - Defines short paired intergenic transcripts and information about the overlap of the transcript pair.
 
 
-
-
-<img align="right" src="../images/figure_5.png" height="400">
 #### 2. Identification of known Transcription Factors (TF) binding sites that are actively transcribed
-
+<img align="right" src="../images/figure_5.png" height="400">
 
 ## Pipeline/Workflow
 *Processing and aligning:*
