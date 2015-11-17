@@ -20,8 +20,9 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 ## Steps:
 
+<img align="right" src="../images/figure_2.png" width="500">
 ### Processing and aligning (Single Replicate)
-<img align="right" src="../images/figure_2.png" height="300">
+
 - quality-metric-fastqc            - Calculate Quality metrics on fastq file.
 - trim-adapter                     - Trims 3' adapter.  If reads are >32bp after trimming, they are kept for alignment.
 - trim-polyA                       - Trims polyA (up to 20A's).  If reads are >32bp after trimming, they are kept for alignment.
@@ -33,8 +34,9 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 ### Identification of active enhancers
 
+<img align="right" src="../images/figure_4.png" height="400">
 #### 1. De novo identification of enhancers
-<img align="right" src="../images/figure_4.png" height="300">
+
 - extend-genic-transcripts         - Extend 10 kb away from either end of annotated genes.
 - intergenic-transcripts           - Reports enhancer transcripts that have no overlap +/- 10kb of genic regions.
 - Define_enhancer_transcripts.pl   - Defines short paired intergenic transcripts and information about the overlap of the transcript pair.
@@ -42,9 +44,9 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 
 
-
+<img align="right" src="../images/figure_5.png" height="400">
 #### 2. Identification of known Transcription Factors (TF) binding sites that are actively transcribed
-<img align="center" src="../images/figure_5.png" height="300">
+
 
 ## Pipeline/Workflow
 *Processing and aligning:*
