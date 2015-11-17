@@ -2,38 +2,49 @@
 
 This directory and pipeline contains the scripts to run identify active enhancers from GRO-seq data.
 
-## Dependencies:
--------------
+<img src="../images/figure_1.png" width="150">
 
-Depends on several common bioinformatics tools:
-- [ ] bedtools
-- [ ] bedops
-- [ ] bedGraphToBigWig (from the Kent source utilities)
+## Dependencies:
+
+* [R](www.r-project.org/)
+* [Perl](https://www.perl.org)
+* [Python](https://www.python.org/)
+* [fastqc](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* [cutadapt](http://cutadapt.readthedocs.org/en/stable/index.html)
+* [Burrows-Wheeler aligner (BWA)](http://bio-bwa.sourceforge.net)
+* [groHMM](http://www.bioconductor.org/packages/release/bioc/html/groHMM.html)
+* [bedtools](http://bedtools.readthedocs.org/en/latest/)
+* [samtools](http://samtools.sourceforge.net/)
+
 
 
 ## Steps:
 
 ### Processing and aligning (Single Replicate)
+<img align="right" src="../images/figure_2.png" width="200">
 - quality-metric-fastqc            - Calculate Quality metrics on fastq file.
 - trim-adapter                     - Trims 3' adapter.  If reads are >32bp after trimming, they are kept for alignment.
 - trim-polyA                       - Trims polyA (up to 20A's).  If reads are >32bp after trimming, they are kept for alignment.
 - align-bwa                        - Aligns data using BWA to assembly.
 
-### Analyzing data using groHMM (#TODO: Add scripts and steps)
+### Analyzing data using groHMM
+#TODO: Add scripts and steps
 
 
 ### Identification of active enhancers
 
 #### 1. De novo identification of enhancers
+<img align="right" src="../images/figure_4.png" width="150">
 - extend-genic-transcripts         - Extend 10 kb away from either end of annotated genes.
 - intergenic-transcripts           - Reports enhancer transcripts that have no overlap +/- 10kb of genic regions.
 - Define_enhancer_transcripts.pl   - Defines short paired intergenic transcripts and information about the overlap of the transcript pair.
 
 
+
 #### 2. Identification of known Transcription Factors (TF) binding sites that are actively transcribed
+<img align="center" src="../images/figure_5.png" width="150">
 
-
-## Pipeline
+## Pipeline/Workflow
 *Processing and aligning:*
 ```
 INPUTS:  reads.fastq.gz                 reads.fastq.gz                    trim-adapter.fastq.gz(a)          trim-polyA.fastq.gz(b)
