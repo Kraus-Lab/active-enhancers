@@ -2,7 +2,7 @@
 
 This directory and pipeline contains the scripts to run identify active enhancers from GRO-seq data.
 
-<img src="../images/figure_1.png" width="200">
+<img src="../images/figure_1.png" width="500">
 
 ## Dependencies:
 
@@ -21,28 +21,30 @@ This directory and pipeline contains the scripts to run identify active enhancer
 ## Steps:
 
 ### Processing and aligning (Single Replicate)
-<img align="right" src="../images/figure_2.png" width="200">
+<img align="right" src="../images/figure_2.png" height="300">
 - quality-metric-fastqc            - Calculate Quality metrics on fastq file.
 - trim-adapter                     - Trims 3' adapter.  If reads are >32bp after trimming, they are kept for alignment.
 - trim-polyA                       - Trims polyA (up to 20A's).  If reads are >32bp after trimming, they are kept for alignment.
 - align-bwa                        - Aligns data using BWA to assembly.
 
 ### Analyzing data using groHMM
-#TODO: Add scripts and steps
+(TODO): Add scripts and steps
 
 
 ### Identification of active enhancers
 
 #### 1. De novo identification of enhancers
-<img align="right" src="../images/figure_4.png" width="200">
+<img align="right" src="../images/figure_4.png" height="300">
 - extend-genic-transcripts         - Extend 10 kb away from either end of annotated genes.
 - intergenic-transcripts           - Reports enhancer transcripts that have no overlap +/- 10kb of genic regions.
 - Define_enhancer_transcripts.pl   - Defines short paired intergenic transcripts and information about the overlap of the transcript pair.
 
 
 
+
+
 #### 2. Identification of known Transcription Factors (TF) binding sites that are actively transcribed
-<img align="center" src="../images/figure_5.png" width="200">
+<img align="center" src="../images/figure_5.png" height="300">
 
 ## Pipeline/Workflow
 *Processing and aligning:*
@@ -59,7 +61,6 @@ OUTPUTS: fastqc-metrics                 trim-adapter.fastq.gz(a)          trim-p
 *Identification of active enhancers:*
 
 1. *De novo identification of enhancers*
-
 ```
 INPUTS:   annotated_genes.bed                     annotated_genes.bed                           intergenic-transcripts.bed(e)
                                                   extend-genic-transcript.bed(d)
@@ -72,5 +73,7 @@ OUTPUTS: extend-genic-transcript.bed(d)           intergenic-transcripts.bed(e) 
                                                                                                 short-intergenic-transcripts-length-overlap.bed
                                                                                                 short-intergenic-transcripts-1kb-center.bed
 ```
-
 2. *Identification of known Transcription Factors (TF) binding sites that are actively transcribed*
+```
+#TODO
+```
