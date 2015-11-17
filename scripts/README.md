@@ -1,6 +1,6 @@
 # Kraus lab template for identifying active enhancers from GRO-seq data.
 
-This directory and pipeline contains the scripts to run identify active enhancers from GRO-seq data.
+This directory and pipeline contains the scripts to identify active enhancers from GRO-seq data.
 
 <img src="../images/figure_1.png" width="500">
 
@@ -32,7 +32,7 @@ This directory and pipeline contains the scripts to run identify active enhancer
 (TODO): Add scripts and steps
 
 
-###<br/><br/><br/> Identification of active enhancers
+###<br/><br/><br/><br/>  Identification of active enhancers
 
 
 #### 1. De novo identification of enhancers
