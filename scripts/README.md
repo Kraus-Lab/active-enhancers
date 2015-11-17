@@ -2,7 +2,7 @@
 
 This directory and pipeline contains the scripts to run identify active enhancers from GRO-seq data.
 
-<img src="../images/figure_1.png" width="150">
+<img src="../images/figure_1.png" width="200">
 
 ## Dependencies:
 
@@ -34,7 +34,7 @@ This directory and pipeline contains the scripts to run identify active enhancer
 ### Identification of active enhancers
 
 #### 1. De novo identification of enhancers
-<img align="right" src="../images/figure_4.png" width="150">
+<img align="right" src="../images/figure_4.png" width="200">
 - extend-genic-transcripts         - Extend 10 kb away from either end of annotated genes.
 - intergenic-transcripts           - Reports enhancer transcripts that have no overlap +/- 10kb of genic regions.
 - Define_enhancer_transcripts.pl   - Defines short paired intergenic transcripts and information about the overlap of the transcript pair.
@@ -42,7 +42,7 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 
 #### 2. Identification of known Transcription Factors (TF) binding sites that are actively transcribed
-<img align="center" src="../images/figure_5.png" width="150">
+<img align="center" src="../images/figure_5.png" width="200">
 
 ## Pipeline/Workflow
 *Processing and aligning:*
@@ -59,6 +59,7 @@ OUTPUTS: fastqc-metrics                 trim-adapter.fastq.gz(a)          trim-p
 *Identification of active enhancers:*
 
 1. *De novo identification of enhancers*
+
 ```
 INPUTS:   annotated_genes.bed                     annotated_genes.bed                           intergenic-transcripts.bed(e)
                                                   extend-genic-transcript.bed(d)
