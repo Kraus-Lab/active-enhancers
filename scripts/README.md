@@ -20,9 +20,9 @@ This directory and pipeline contains the scripts to run identify active enhancer
 
 ## Steps:
 
-<img align="right" src="../images/figure_2.png" width="500">
-### Processing and aligning (Single Replicate)
 
+### Processing and aligning (Single Replicate)
+<img align="right" src="../images/figure_2.png" width="300">
 - quality-metric-fastqc            - Calculate Quality metrics on fastq file.
 - trim-adapter                     - Trims 3' adapter.  If reads are >32bp after trimming, they are kept for alignment.
 - trim-polyA                       - Trims polyA (up to 20A's).  If reads are >32bp after trimming, they are kept for alignment.
