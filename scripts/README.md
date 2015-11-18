@@ -20,7 +20,6 @@ This directory and pipeline contains the scripts to identify active enhancers fr
 
 ## Steps:
 
-
 ### Processing and aligning (Single Replicate)
 <img align="right" src="../images/figure_2.png" width="400">
 - quality-metric-fastqc            - Calculate Quality metrics on fastq file.
