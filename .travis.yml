@@ -3,7 +3,12 @@ sudo: required
 services:
   - docker
   
-scripts:
+before-install:
   - docker build -t Kraus-Lab/active-enhancers .
   - docker run Kraus-Lab/active-enhancers
+
+script:
   - docker ps
+
+after_script:
+  - docker rm -f $(docker ps -q)
