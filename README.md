@@ -1,6 +1,7 @@
 # active-enhancers
 Identifying active enhancers and well known transcritption factor binding sites from GRO-seq data.
 
+[![Build Status](https://travis-ci.org/Kraus-Lab/active-enhancers.svg?branch=master)](https://travis-ci.org/Kraus-Lab/active-enhancers)
 
 ## Contributors
 - [Anusha Nagari](https://github.com/anaga2)
