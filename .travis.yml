@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+  
+scripts:
+  - docker build -t Kraus-Lab/active-enhancers .
+  - docker run Kraus-Lab/active-enhancers
+  - docker ps
