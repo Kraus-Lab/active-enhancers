@@ -44,7 +44,7 @@ RUN Rscript -e "source('http://bioconductor.org/biocLite.R'); biocLite("BiocUpgr
 
 # Install SRA Tool
 RUN wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.4-1/sratoolkit.2.5.4-1-ubuntu64.tar.gz" && \
-    tar zxfv sratoolkit.2.5.4-1-ubuntu64.tar.gz && \
+    tar -zxfv sratoolkit.2.5.4-1-ubuntu64.tar.gz && \
     cp -r sratoolkit.2.5.4-1-ubuntu64/bin/* /usr/local/bin && \
 
 # Clean up
