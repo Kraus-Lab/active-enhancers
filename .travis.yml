@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t Kraus-Lab/active-enhancers .
-  - docker run Kraus-Lab/active-enhancers
+  - docker build -t active-enhancers .
+  - docker run active-enhancers
   - docker ps
   - docker rm -f $(docker ps -q)
