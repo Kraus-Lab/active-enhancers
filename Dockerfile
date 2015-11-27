@@ -40,7 +40,7 @@ RUN apt-get install -y samtools=0.1.19-1
 RUN apt-get install -y bedtools=2.17.0-1
 
 # Install groHMM
-RUN Rscript -e "source('http://bioconductor.org/biocLite.R'); biocLite("BiocUpgrade"); biocLite('groHMM')"
+RUN Rscript -e "source('https://bioconductor.org/biocLite.R'); biocLite('groHMM')"
 
 # Install SRA Tool
 RUN wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.4-1/sratoolkit.2.5.4-1-ubuntu64.tar.gz" && \
