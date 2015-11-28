@@ -28,6 +28,7 @@ RUN apt-get install -y fastqc=0.10.1+dfsg-2
 RUN pip install cutadapt==1.2.1
 
 # Install BWA
+WORKDIR /src
 RUN git clone https://github.com/lh3/bwa && \
 	cd bwa && \
 	git checkout 0.7.12 &&  \
@@ -43,15 +44,15 @@ RUN apt-get install -y bedtools=2.17.0-1
 #RUN R -e "source('http://bioconductor.org/biocLite.R'); biocLite('groHMM')"
 
 # Install SRA Tool
-RUN wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.4-1/sratoolkit.2.5.4-1-ubuntu64.tar.gz" && \
-    tar -zxfv sratoolkit.2.5.4-1-ubuntu64.tar.gz && \
-    cp -r sratoolkit.2.5.4-1-ubuntu64/bin/* /usr/local/bin && \
+RUN wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.4/sratoolkit.2.5.4-ubuntu64.tar.gz" && \
+    tar -zxfv sratoolkit.2.5.4-ubuntu64.tar.gz" && \
+    cp -r sratoolkit.2.5.4-ubuntu64/bin/* /usr/local/bin && \
 
 # Clean up
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/ \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
-    && rm -fr sratoolkit.2.5.4-1-ubuntu64/ \
+    && rm -fr sratoolkit.2.5.4-ubuntu64/ \
     && rm -fr bwa/
 
 # Add scripts
