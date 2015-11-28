@@ -45,7 +45,7 @@ RUN apt-get install -y bedtools=2.17.0-1
 
 # Install SRA Tool
 RUN wget "http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.5.4/sratoolkit.2.5.4-ubuntu64.tar.gz" && \
-    tar -zxfv sratoolkit.2.5.4-ubuntu64.tar.gz && \
+    tar -zxf sratoolkit.2.5.4-ubuntu64.tar.gz && \
     cp -r sratoolkit.2.5.4-ubuntu64/bin/* /usr/local/bin && \
 
 # Clean up
