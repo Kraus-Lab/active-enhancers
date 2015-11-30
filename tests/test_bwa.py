@@ -1,6 +1,8 @@
 import subprocess
 import tempfile
 import pytest
+from base import check_docker_output
+
 
 
 def test_bwa_call():
