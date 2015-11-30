@@ -1,10 +1,17 @@
+language: python
+
 sudo: required
+
+python:
+  - "2.7"
 
 services:
   - docker
 
-script:
+before_script:
   - docker build -t active-enhancers .
   - docker run active-enhancers
   - docker ps
+script:
+  - py.test
   - docker rm -f $(docker ps -q)

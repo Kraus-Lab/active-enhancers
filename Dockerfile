@@ -63,11 +63,11 @@ RUN mkdir /data
 WORKDIR /data
 
 # Download example data from GSE43835
-fastq-dump -A SRR653421 --stdout --gzip > GRO-seq_Vehicle_rep1.fastq.gz
-fastq-dump -A SRR653422	--stdout --gzip > GRO-seq_Vehicle_rep2.fastq.gz
-fastq-dump -A SRR653423 --stdout --gzip > GRO-seq_E2_10m_rep1.fastq.gz
-fastq-dump -A SRR653424 --stdout --gzip > GRO-seq_E2_10m_rep2.fastq.gz
-fastq-dump -A SRR653425 --stdout --gzip > GRO-seq_E2_40m_rep1.fastq.gz
-fastq-dump -A SRR653426 --stdout --gzip > GRO-seq_E2_40m_rep2.fastq.gz
+#fastq-dump -A SRR653421 --stdout --gzip > GRO-seq_Vehicle_rep1.fastq.gz
+#fastq-dump -A SRR653422	--stdout --gzip > GRO-seq_Vehicle_rep2.fastq.gz
+#fastq-dump -A SRR653423 --stdout --gzip > GRO-seq_E2_10m_rep1.fastq.gz
+#fastq-dump -A SRR653424 --stdout --gzip > GRO-seq_E2_10m_rep2.fastq.gz
+#fastq-dump -A SRR653425 --stdout --gzip > GRO-seq_E2_40m_rep1.fastq.gz
+#fastq-dump -A SRR653426 --stdout --gzip > GRO-seq_E2_40m_rep2.fastq.gz
 
 WORKDIR /
