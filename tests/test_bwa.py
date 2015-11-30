@@ -5,6 +5,6 @@ from base import check_docker_output
 
 
 
-def test_bwa_call(self):
+def test_bwa_call():
     out, err = check_docker_output(tool='active-enhancers/bwa')
-    self.assertTrue('Program: bwa' in out)
+    assertTrue('Program: bwa' in out)
