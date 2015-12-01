@@ -10,8 +10,5 @@ services:
 
 before_script:
   - docker build -t active-enhancers .
-  - docker run active-enhancers
-  - docker ps
 script:
   - py.test
-  - docker rm -f $(docker ps -q)
