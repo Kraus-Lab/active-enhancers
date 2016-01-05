@@ -37,9 +37,12 @@ and no treatment (Veh).
 
 At first you need to install docker. Please follow the instruction on https://docs.docker.com/installation/
 
-After the successful installation, all what you need to do is:
+After the successful installation, please follow the online tutorial if you haven't used DOCKER before: https://training.docker.com/introduction-to-docker.
+
+# Download data using sra-tools
+
+# Mount data
 
 ### TODO
 
-- Describe how to use docker
 - Add in tutorial for scripts
