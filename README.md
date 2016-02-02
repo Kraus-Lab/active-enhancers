@@ -1,5 +1,5 @@
 # active-enhancers
-Identifying active enhancers and well known transcritption factor binding sites from GRO-seq data.
+Identifying active enhancers and well known transcription factor binding sites from GRO-seq data.
 
 [![Build Status](https://travis-ci.org/Kraus-Lab/active-enhancers.svg?branch=master)](https://travis-ci.org/Kraus-Lab/active-enhancers)
 
@@ -26,12 +26,6 @@ Docker Image to analyze GRO-seq data.
  * [groHMM](http://www.bioconductor.org/packages/release/bioc/html/groHMM.html)
  * [SRA Tools 2.5.4](https://github.com/ncbi/sra-tools)
 
-### Included data:
-
-Data is downloaded from [GSE43835](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE43835).
-
-This experiment looks at GRO-seq data from MCF-7 human breast cancer cells in response to short time course of E2 treatment (10min, 40min)
-and no treatment (Veh).
 
 ### Usage
 
@@ -39,10 +33,13 @@ At first you need to install docker. Please follow the instruction on https://do
 
 After the successful installation, please follow the online tutorial if you haven't used DOCKER before: https://training.docker.com/introduction-to-docker.
 
-# Download data using sra-tools
+### Tutorial
 
-# Mount data
+A step-by-step tutorial is available at [Tutorial](Tutorial.md)
 
-### TODO
+#### Data:
 
-- Add in tutorial for scripts
+Data for the tutorial is downloaded from [GSE43835](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE43835).
+
+This experiment looks at GRO-seq data from MCF-7 human breast cancer cells in response to short time course of E2 treatment (10min, 40min)
+and no treatment (Veh).
