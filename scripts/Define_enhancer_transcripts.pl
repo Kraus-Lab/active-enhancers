@@ -9,16 +9,16 @@ my $outfile3;
 my $help;
 my %Options;
 my $optset=getopts('i:a:b:c:h:',\%Options);
-my $size = @ARGV;
+my $size = @ARGV+1;
 
 if($size == 0 || !$optset || $Options{h})
 {
 	print "Usage: ./Define_enhancer_transcripts.pl  -i <Infile> -a <OutputFile1> -b <OutputFile2> -c <OutputFile3> \n";
 	print "Options:\n";
-	print "        -i <InputFile>\n";
-	print "        -a <OutputFile1>\n";
-	print "        -b <OutputFile2>\n";
-	print "        -c <OutputFile3>\n";
+	print "        -i Input transcripts\n";
+	print "        -a Intergenic Short Paired transcripts\n";
+	print "        -b Length of Overlaps\n";
+	print "        -c 1kb window around center of overlap of intergenic short paired\n";
 	die("Get ready with the files… \n");
 }
 
