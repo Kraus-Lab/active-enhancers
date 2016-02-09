@@ -11,7 +11,7 @@ my %Options;
 my $optset=getopts('i:a:b:c:h:',\%Options);
 my $size = @ARGV+1;
 
-if($size == 0 || !$optset || $Options{h})
+if($size == 1 || !$optset || $Options{h})
 {
 	print "Usage: ./Define_enhancer_transcripts.pl  -i <Infile> -a <OutputFile1> -b <OutputFile2> -c <OutputFile3> \n";
 	print "Options:\n";
