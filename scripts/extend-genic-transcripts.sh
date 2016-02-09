@@ -11,10 +11,10 @@ usage() {
   echo "Extend 10 kb away from either end of annotated genes in order to distinguish enhancer transcription from genic transcription."
   echo ""
   echo ""
-  echo "-h Help documentation for $script_name"
+  echo "-h   Help documentation for $script_name"
   echo "--f  --Annotation file (BED format)"
   echo "--g  --Chromosome length file"
-  echo "-v  --Version of script"
+  echo "-v   --Version of script"
   echo "Example: ./$script_name -f annotated_genes.bed  -g chromosome_info.txt"
   exit 1
 }
