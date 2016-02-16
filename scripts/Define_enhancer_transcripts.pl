@@ -16,7 +16,7 @@ if($size == 0 || !$optset || $Options{h})
 	print "Usage: ./Define_enhancer_transcripts.pl  -i <Infile> -a <OutputFile1> -b <OutputFile2> -c <OutputFile3> \n";
 	print "Options:\n";
 	print "        -i Input transcripts\n";
-	print "        -a Intergenic Short Paired transcripts\n";
+	print "        -a Intergenic Short transcripts\n";
 	print "        -b Length of Overlaps\n";
 	print "        -c 1kb window around center of overlap of intergenic short paired\n";
 	die("Get ready with the files… \n");
